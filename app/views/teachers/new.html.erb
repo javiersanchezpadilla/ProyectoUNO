@@ -1,0 +1,11 @@
+<h1>Teachers#new</h1>
+<p>Find me in app/views/teachers/new.html.erb</p>
+    <!--Busar y leer rails form helper -->
+<%= form_for @nuevomaestro do |campodelabasededatos| %>
+    <%= campodelabasededatos.text_field :curp  %>
+    <%= campodelabasededatos.text_field :nombre  %>
+    <%= campodelabasededatos.text_field :titulo  %>
+    <%= campodelabasededatos.text_field :num_cedula  %>
+    <%= campodelabasededatos.submit "Guardar" %>
+<% end %>
+dafsd
