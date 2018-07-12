@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180709173310) do
+ActiveRecord::Schema.define(version: 20180712155319) do
+
+  create_table "careers", force: :cascade do |t|
+    t.string "clave_carrera"
+    t.string "descripcion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "teachers", force: :cascade do |t|
     t.string "curp"
