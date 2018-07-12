@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'careers/index'
-
-  get 'careers/new'
-
-  get 'careers/edit'
-
-  get 'careers/show'
-
   # get 'teachers/index'
   # get 'teachers/new'
   # get 'teachers/edit'
