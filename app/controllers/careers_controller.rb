@@ -4,6 +4,7 @@ class CareersController < ApplicationController
   end
 
   def new
+    @career = Career.new
   end
 
   def edit

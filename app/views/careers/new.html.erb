@@ -1,2 +1,18 @@
-<h1>Careers#new</h1>
-<p>Find me in app/views/careers/new.html.erb</p>
+<h1>Nueva Carrera</h1>
+<%= form_for @career do |career| %>
+    <p>
+        <%= career.label :clave_carrera %>
+        <%= career.text_field :clave_carrera %>
+    </p>
+
+    <p>
+        <%= career.label :descripcion %>
+        <%= career.text_area :descripcion, rows: 5 %>
+    </p>
+
+     <p>
+        
+        <%= career.submit "Guardar Carrera" %>
+    </p>
+    
+<% end %>
