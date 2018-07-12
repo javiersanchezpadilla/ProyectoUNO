@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # get 'teachers/show'
 
   resources :teachers
+  resources :careers
 
   get 'welcome/index'
   get 'welcome/contacto'
