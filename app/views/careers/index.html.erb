@@ -1,0 +1,15 @@
+<h1>Carreras Disponibles</h1>
+
+<% if @careers.blank? %>
+
+  <p>No hay carreras registradas en la DB</p>
+
+<% else %>
+
+    <% @careers.each do |career| %>
+        <p>
+            <%= "#{career.clave_carrera} - #{career.descripcion}" %>
+        </p>
+    <% end %>
+
+<% end %>
