@@ -1,0 +1,28 @@
+<h1>Students#index</h1>
+<p>Find me in app/views/students/index.html.erb</p>
+
+<% if @datosestudiante.blank? %>
+  <p>No hay estudiantes registrados en la DB</p>
+<% else %>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Control</th>
+                <th>Nombre Estudiante</th>
+                <th>Clv Carr.</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @datosestudiante.each do |varestudiante| %>
+                <tr>
+                    <td><%= varestudiante.control %></td>
+                    <td><%= varestudiante.nombre %></td>
+                    <td><%= varestudiante.clave_carrera %></td>
+                </tr>
+            <% end %>
+            
+        </tbody>
+    </table>
+
+<% end %>

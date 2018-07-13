@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  # get 'teachers/index'
-  # get 'teachers/new'
-  # get 'teachers/edit'
-  # get 'teachers/show'
-
+  
   resources :teachers
   resources :careers
+  resources :students
 
   get 'welcome/index'
   get 'welcome/contacto'

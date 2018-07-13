@@ -6,10 +6,25 @@
 
 <% else %>
 
-    <% @careers.each do |career| %>
-        <p>
-            <%= "#{career.clave_carrera} - #{career.descripcion}" %>
-        </p>
-    <% end %>
+   
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Clave de Carrera</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @careers.each do |career| %>
+                <tr>
+                    <td><%= career.clave_carrera %></td>
+                    <td><%= career.descripcion %></td>
+                </tr>
+            <% end %>
+            
+        </tbody>
+    </table>
 
 <% end %>
