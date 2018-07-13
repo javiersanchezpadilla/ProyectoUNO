@@ -10,6 +10,7 @@
                 <th>Control</th>
                 <th>Nombre Estudiante</th>
                 <th>Clv Carr.</th>
+                <th>Opciones</th>
             </tr>
         </thead>
 
@@ -19,6 +20,9 @@
                     <td><%= varestudiante.control %></td>
                     <td><%= varestudiante.nombre %></td>
                     <td><%= varestudiante.clave_carrera %></td>
+                    <td><!-- student ruta extraida con rake routes, no olvidar agregar _path -->
+                        <%= link_to "[ show ]", student_path(varestudiante) %>
+                    </td>
                 </tr>
             <% end %>
             
