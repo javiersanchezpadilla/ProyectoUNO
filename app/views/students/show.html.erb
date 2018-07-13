@@ -1,2 +1,21 @@
-<h1>Students#show</h1>
-<p>Find me in app/views/students/show.html.erb</p>
+<h1>Datos del Estudiante</h1>
+<%= @datosestudiante.inspect %>
+<table border="1">
+    <tbody>
+        <tr>
+            <th>Control</th>
+            <td><%= @datosestudiante.control %></td>
+        </tr>
+        <tr>
+            <th>Nombre Estudiante</th>
+            <td><%= @datosestudiante.nombre %></td>
+        </tr>  
+        <tr>
+            <th>Clv Carr.</th>
+            <td><%= @datosestudiante.clave_carrera %></td>
+        </tr>       
+    </tbody>
+</table>
+
+    
+                

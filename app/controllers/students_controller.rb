@@ -17,6 +17,8 @@ class StudentsController < ApplicationController
   end
 
   def show
+    # binding.pry
+    @datosestudiante = Student.find params[:id]
   end
 
   private
