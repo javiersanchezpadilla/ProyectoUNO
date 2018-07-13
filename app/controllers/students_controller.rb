@@ -14,6 +14,16 @@ class StudentsController < ApplicationController
   end
 
   def edit
+    @datosestudiante = Student.find params[:id]
+  end
+
+  def update
+    @datosestudiante = Student.find params[:id]
+    @datosestudiante.update(parametros_estudiante)
+    # Redirije a la vista student show
+    # redirect_to student_path(@datosestudiante) 
+    # Redirije a la vista student index
+    redirect_to students_path
   end
 
   def show

@@ -1,2 +1,23 @@
-<h1>Students#edit</h1>
-<p>Find me in app/views/students/edit.html.erb</p>
+<h1>Edicion de estudiante</h1>
+
+<%= form_for @datosestudiante do |chamaco| %>
+    <p>
+        <%= chamaco.label :Control %>
+        <%= chamaco.text_field :control %>
+    </p>
+
+    <p>
+        <%= chamaco.label :Nombre %>
+        <%= chamaco.text_area :nombre, rows: 5 %>
+    </p>
+
+    <p>
+        <%= chamaco.label :ClaveCarrera %>
+        <%= chamaco.text_area :clave_carrera %>
+    </p>
+
+     <p>
+        
+        <%= chamaco.submit "Actualizar Estudiante" %>
+    </p> 
+<% end %>
