@@ -4,6 +4,7 @@
 <% if @datosestudiante.blank? %>
   <p>No hay estudiantes registrados en la DB</p>
 <% else %>
+    <%= link_to "[ Nuevo Estudiante ]", new_student_path %>
     <table border="1">
         <thead>
             <tr>
@@ -22,6 +23,8 @@
                     <td><%= varestudiante.clave_carrera %></td>
                     <td><!-- student ruta extraida con rake routes, no olvidar agregar _path -->
                         <%= link_to "[ show ]", student_path(varestudiante) %>
+                        <!-- Enlace para editar un registro especifico -->
+                        <%= link_to "[ Editar ]", edit_student_path(varestudiante) %>
                     </td>
                 </tr>
             <% end %>
