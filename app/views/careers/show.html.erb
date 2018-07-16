@@ -1,2 +1,16 @@
 <h1>Careers#show</h1>
 <p>Find me in app/views/careers/show.html.erb</p>
+<p><%= link_to "Regresar al listado", careers_path %></p>
+
+<table border="1">
+    <tbody>
+        <tr>
+            <th>Clave carrera</th>
+            <td><%= @carrera.clave_carrera %></td>
+        </tr>
+        <tr>
+            <th>Nombre de la carrera</th>
+            <td><%= @carrera.descripcion %></td>
+        </tr>  
+    </tbody>
+</table>

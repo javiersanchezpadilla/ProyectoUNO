@@ -1,24 +1,31 @@
 class CareersController < ApplicationController
+  
   def index
-    @careers = Career.all
+    @carrera = Career.all
   end
 
   def new
-    @career = Career.new
-    # binding.pry
+    @carrera = Career.new
   end
 
   def create
-    @career = Career.new(career_params)
-    @career.save
+    @carrera = Career.new(career_params)
+    @carrera.save
     redirect_to careers_path
-    # binding.pry
   end
 
   def edit
+    @carrera = Career.find params[:id]
+  end
+
+  def update
+    @carrera = Career.find params[:id]
+    @carrera.update(career_params)
+    redirect_to careers_path
   end
 
   def show
+    @carrera = Career.find params[:id]
   end
 
   private

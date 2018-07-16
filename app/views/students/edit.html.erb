@@ -1,23 +1,27 @@
 <h1>Edicion de estudiante</h1>
 
-<%= form_for @datosestudiante do |chamaco| %>
+<%= render 'formulario' %>
+
+<!--
+<%# form_for @datosestudiante do |chamaco| %>
     <p>
-        <%= chamaco.label :Control %>
-        <%= chamaco.text_field :control %>
+        <%# chamaco.label :Control %>
+        <%# chamaco.text_field :control %>
     </p>
 
     <p>
-        <%= chamaco.label :Nombre %>
-        <%= chamaco.text_area :nombre, rows: 5 %>
+        <%# chamaco.label :Nombre %>
+        <%# chamaco.text_area :nombre, rows: 5 %>
     </p>
 
     <p>
-        <%= chamaco.label :ClaveCarrera %>
-        <%= chamaco.text_area :clave_carrera %>
+        <%# chamaco.label :ClaveCarrera %>
+        <%# chamaco.text_area :clave_carrera %>
     </p>
 
      <p>
         
-        <%= chamaco.submit "Actualizar Estudiante" %>
+        <%# chamaco.submit "Actualizar Estudiante" %>
     </p> 
-<% end %>
+<%# end %>
+-->

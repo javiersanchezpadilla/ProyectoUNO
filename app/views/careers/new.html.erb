@@ -1,18 +1,15 @@
 <h1>Nueva Carrera</h1>
-<%= form_for @career do |career| %>
-    <p>
-        <%= career.label :clave_carrera %>
-        <%= career.text_field :clave_carrera %>
-    </p>
 
+<%= form_for @carrera do |carreravar| %>
     <p>
-        <%= career.label :descripcion %>
-        <%= career.text_area :descripcion, rows: 5 %>
+        <%=carreravar.label :Clave_carrera %>
+        <%=carreravar.text_field :clave_carrera %>
     </p>
-
+    <p>
+        <%=carreravar.label :descripcion %>
+        <%=carreravar.text_area :descripcion, rows: 5 %>
+    </p>
      <p>
-        
-        <%= career.submit "Guardar Carrera" %>
+        <%=carreravar.submit "Guardar Carrera" %>
     </p>
-    
 <% end %>

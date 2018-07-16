@@ -1,0 +1,33 @@
+<h1>Plans#index</h1>
+<p>Find me in app/views/plans/index.html.erb</p>   
+
+<%= link_to "[ Dar de alta Nuevo Plan ]", new_plan_path %>
+<% if @planestudio.blank? %>
+  <p>No hay planes de estudio registrados</p>
+<% else %>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Clave Plan de Estudios</th>
+                <th>Clave Carrera</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @planestudio.each do |elplan| %>
+                <tr>
+                    <td><%= elplan.clave_plan_estudio %></td>
+                    <td><%= elplan.clave_carrera %></td>
+                    <td><!-- student ruta extraida con rake routes, no olvidar agregar _path -->
+                        <%= link_to "[ show ]", plan_path(elplan) %>
+                        <!-- Enlace para editar un registro especifico -->
+                        <%= link_to "[ Editar ]", edit_plan_path(elplan) %>
+                    </td>
+                </tr>
+            <% end %>
+            
+        </tbody>
+    </table>
+
+<% end %>

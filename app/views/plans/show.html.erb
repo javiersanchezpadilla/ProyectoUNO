@@ -1,0 +1,16 @@
+<h1>Plans#show</h1>
+<p>Find me in app/views/plans/show.html.erb</p>
+<p><%= link_to "Regresar al listado", plans_path %></p>
+
+<table border="1">
+    <tbody>
+        <tr>
+            <th>Clave Plan de Estudios</th>
+            <td><%= @planestudio.clave_plan_estudio %></td>
+        </tr>
+        <tr>
+            <th>Nombre de la carrera</th>
+            <td><%= @planestudio.clave_carrera %></td>
+        </tr>  
+    </tbody>
+</table>

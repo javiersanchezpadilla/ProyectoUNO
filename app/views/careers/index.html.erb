@@ -1,13 +1,9 @@
 <h1>Carreras Disponibles</h1>
 
-<% if @careers.blank? %>
-
+<% if @carrera.blank? %>
   <p>No hay carreras registradas en la DB</p>
-
 <% else %>
-
-   
-
+    <%= link_to "[ Nueva Carrera]", new_career_path %>
     <table border="1">
         <thead>
             <tr>
@@ -15,16 +11,18 @@
                 <th>Descripción</th>
             </tr>
         </thead>
-
         <tbody>
-            <% @careers.each do |career| %>
+            <% @carrera.each do |carreravar| %>
                 <tr>
-                    <td><%= career.clave_carrera %></td>
-                    <td><%= career.descripcion %></td>
+                    <td><%= carreravar.clave_carrera %></td>
+                    <td><%= carreravar.descripcion %></td>
+                    <td>
+                        <%= link_to "[ mostrar ]", career_path(carreravar) %>
+                        <%= link_to "[ Editar ]", edit_career_path(carreravar) %>
+                    </td>
                 </tr>
             <% end %>
             
         </tbody>
     </table>
-
 <% end %>
