@@ -10,8 +10,16 @@ class StudentsController < ApplicationController
 
   def create
     @datosestudiante = Student.new(parametros_estudiante)
-    @datosestudiante.save
-    redirect_to students_path
+
+    respond_to do |format|
+      if @datosestudiante.save
+        format.html { redirect_to students_path }
+      else
+        format.html { render :new }
+        format.json { render json: @datosestudiante.errors, status: :unprocessable_entity }
+      end
+    end
+
   end
 
   def edit
@@ -20,11 +28,18 @@ class StudentsController < ApplicationController
 
   def update
     @datosestudiante = Student.find params[:id]
-    @datosestudiante.update(parametros_estudiante)
+
+    respond_to do |format|
+      if @datosestudiante.update(parametros_estudiante)
+        format.html { redirect_to students_path }
+      else
+        format.html { render :edit }
+        format.json { render json: @datosestudiante.errors, status: :unprocessable_entity }
+      end
+    end
     # Redirije a la vista student show
     # redirect_to student_path(@datosestudiante) 
     # Redirije a la vista student index
-    redirect_to students_path
   end
 
   def show
