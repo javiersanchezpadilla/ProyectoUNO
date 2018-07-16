@@ -32,6 +32,12 @@ class StudentsController < ApplicationController
     @datosestudiante = Student.find params[:id]
   end
 
+  def destroy
+    @datosestudiante = Student.find params[:id]
+    @datosestudiante.destroy
+    redirect_to students_path
+  end
+
   private
   def parametros_estudiante
     params.require(:student).permit(:control, :nombre, :clave_carrera)

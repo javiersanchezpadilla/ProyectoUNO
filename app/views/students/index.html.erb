@@ -25,6 +25,12 @@
                         <%= link_to "[ show ]", student_path(varestudiante) %>
                         <!-- Enlace para editar un registro especifico -->
                         <%= link_to "[ Editar ]", edit_student_path(varestudiante) %>
+                        <!-- Eliminar un elemento -->
+                        <%= link_to "[ Eliminar ]", 
+                            student_path(varestudiante), 
+                            method: :delete, 
+                            data: { confirm: '¿Estas seguro de eliminar este elemento?' } 
+                        %>
                     </td>
                 </tr>
             <% end %>
