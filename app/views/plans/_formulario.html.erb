@@ -1,0 +1,14 @@
+<%= form_for @planestudio do |planvar| %>
+    <p>
+        <%=planvar.label :Clave_Plan %>
+        <%=planvar.text_field :clave_plan_estudio %>
+    </p>
+    <p>
+        <%=planvar.label :Clave_carrera %>
+        <!-- Browse para datos -->
+        <%=planvar.select :career_id, Career.all.map { |c| [c.clave_carrera, c.id] }, { prompt: '- Seleccionar -' } %>
+    </p>
+     <p>
+        <%=planvar.submit "Guardar Plan de Estudio" %>
+    </p>
+<% end %>

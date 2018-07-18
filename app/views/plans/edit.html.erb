@@ -3,16 +3,4 @@
 
 <p><%= link_to "Regresar al listado", plans_path %></p>
 
-<%= form_for @planestudio do |planvar| %>
-    <p>
-        <%=planvar.label "Clave" %>
-        <%=planvar.text_field :clave_plan_estudio %>
-    </p>
-    <p>
-        <%=planvar.label :Clave %>
-        <%=planvar.text_area :clave_carrera %>
-    </p>
-     <p>
-        <%=planvar.submit "Actualizar Plan de Estudio" %>
-    </p>
-<% end %>
+<%= render 'formulario' %>

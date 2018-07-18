@@ -5,6 +5,15 @@
 <% if @planestudio.blank? %>
   <p>No hay planes de estudio registrados</p>
 <% else %>
+
+    <h5>Multiplicacion</h5>
+    <%
+        variable1 = 5
+        variable2 = 10
+    %>
+
+    <%= variable1*variable2 %>
+
     <table border="1">
         <thead>
             <tr>
@@ -18,7 +27,8 @@
             <% @planestudio.each do |elplan| %>
                 <tr>
                     <td><%= elplan.clave_plan_estudio %></td>
-                    <td><%= elplan.clave_carrera %></td>
+                    <!-- Aqui se llevo a cabo look up a la entidad padre -->
+                    <td><%= elplan.career.clave_carrera %></td>
                     <td><!-- student ruta extraida con rake routes, no olvidar agregar _path -->
                         <%= link_to "[ show ]", plan_path(elplan) %>
                         <!-- Enlace para editar un registro especifico -->

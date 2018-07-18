@@ -30,6 +30,6 @@ end
 
 private
   def plan_params
-    params.require(:plan).permit(:clave_plan_estudio, :clave_carrera)
+    params.require(:plan).permit(:clave_plan_estudio, :career_id)
   end
 end

@@ -1,16 +1,4 @@
 <h1>Plans#new</h1>
 <p>Find me in app/views/plans/new.html.erb</p>
 
-<%= form_for @planestudio do |planvar| %>
-    <p>
-        <%=planvar.label :Clave_Plan %>
-        <%=planvar.text_field :clave_plan_estudio %>
-    </p>
-    <p>
-        <%=planvar.label :Clave_carrera %>
-        <%=planvar.text_area :clave_carrera %>
-    </p>
-     <p>
-        <%=planvar.submit "Guardar Plan de Estudio" %>
-    </p>
-<% end %>
+<%= render 'formulario' %>
