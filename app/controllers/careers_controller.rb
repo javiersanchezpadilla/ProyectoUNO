@@ -28,6 +28,12 @@ class CareersController < ApplicationController
     @carrera = Career.find params[:id]
   end
 
+  def destroy
+    @carrera = Career.find params[:id]
+    @carrera.destroy
+    redirect_to careers_path
+  end
+
   private
     def career_params
       params.require(:career).permit(:clave_carrera, :descripcion)

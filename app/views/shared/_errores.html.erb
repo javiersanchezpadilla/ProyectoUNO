@@ -1,3 +1,8 @@
+<!-- Esta visa sera comun para desplegar los mensaje s de error captador po rjson -->
+<!-- Se creo la carpeta de forma manual dentro de views (ver com se accede desde la vista) -->
+<!-- views share _errores.html.reb  (la carpeta share se creo manualmente) -->
+<!-- se accedera desde students _formulario.html.erb -->
+
 <% if object.errors.any?  %>
     <ul>
     <% @datosestudiante.errors.full_messages.each do |message| %>
