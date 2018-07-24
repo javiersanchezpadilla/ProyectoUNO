@@ -37,7 +37,8 @@ gem 'coffee-script-source', '1.8.0'
 # Agregando bootstrap al proyecto paso 1
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
-gem 'axlsx', '2.1.0.pre'
+gem 'rubyzip', '>= 1.2.1'
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
 gem 'axlsx_rails'
 
 group :development, :test do

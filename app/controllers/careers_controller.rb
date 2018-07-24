@@ -2,6 +2,13 @@ class CareersController < ApplicationController
   
   def index
     @carrera = Career.all
+
+    respond_to do |format|
+      format.html
+      format.xlsx{
+        render xlsx: 'index', filename: "carreras.xlsx", xlsx_autor: 'ITA'
+      }
+    end
   end
 
   def new

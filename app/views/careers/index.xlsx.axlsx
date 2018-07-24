@@ -1,0 +1,13 @@
+wb = xlsx_package.workbook
+wb.styles do |style|
+	
+	header_cell = style.add_style( sz: 8, alignment: { horizontal: :center })
+
+	wb.add_worksheet(name: "Car") do |sheet|
+		sheet.add_row ["Clave Carrera", "Descripción"], style: header_cell
+		@carrera.each do |item|
+			sheet.add_row [item.clave_carrera, item.descripcion]
+		end
+	end
+
+end
