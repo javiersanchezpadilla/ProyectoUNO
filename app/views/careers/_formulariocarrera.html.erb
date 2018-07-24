@@ -1,0 +1,16 @@
+<!-- Formulario comun para edicion y nuevo registro -->
+<%= render 'shared/errores', object: @carrera %>
+
+<%= form_for @carrera do |carreravar| %>
+    <p>
+        <%=carreravar.label "Clave Carrera" %>
+        <%=carreravar.text_field :clave_carrera %>
+    </p>
+    <p>
+        <%=carreravar.label "Nombre Carrera" %>
+        <%=carreravar.text_area :descripcion, rows: 5 %>
+    </p>
+     <p>
+        <%=carreravar.submit "Actualizar Carrera" %>
+    </p>
+<% end %>

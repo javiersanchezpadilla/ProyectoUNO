@@ -2,17 +2,4 @@
 <p>Find me in app/views/careers/edit.html.erb</p>
 
 <p><%= link_to "Regresar al listado", careers_path %></p>
-
-<%= form_for @carrera do |carreravar| %>
-    <p>
-        <%=carreravar.label :Clave_carrera %>
-        <%=carreravar.text_field :clave_carrera %>
-    </p>
-    <p>
-        <%=carreravar.label :descripcion %>
-        <%=carreravar.text_area :descripcion, rows: 5 %>
-    </p>
-     <p>
-        <%=carreravar.submit "Actualizar Carrera" %>
-    </p>
-<% end %>
+<%= render 'formulariocarrera' %>

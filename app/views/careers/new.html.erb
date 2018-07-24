@@ -1,15 +1,2 @@
 <h1>Nueva Carrera</h1>
-
-<%= form_for @carrera do |carreravar| %>
-    <p>
-        <%=carreravar.label :Clave_carrera %>
-        <%=carreravar.text_field :clave_carrera %>
-    </p>
-    <p>
-        <%=carreravar.label :descripcion %>
-        <%=carreravar.text_area :descripcion, rows: 5 %>
-    </p>
-     <p>
-        <%=carreravar.submit "Guardar Carrera" %>
-    </p>
-<% end %>
+<%= render 'formulariocarrera' %>

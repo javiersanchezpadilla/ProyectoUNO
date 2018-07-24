@@ -5,7 +5,7 @@
 
 <% if object.errors.any?  %>
     <ul>
-    <% @datosestudiante.errors.full_messages.each do |message| %>
+    <% object.errors.full_messages.each do |message| %>
         <ol><%= message %></ol>
     <% end %>
     </ul>

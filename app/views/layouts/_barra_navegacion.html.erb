@@ -1,0 +1,38 @@
+<!-- barra Navegacion -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">   
+    <ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- Dropdown de Carrera-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="carreraDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Carrera
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="carreraDropdown">
+                            <%= link_to "Listado de Carreras", careers_path, class: 'dropdown-item' %>
+                            <%= link_to "Nueva Carrera", new_career_path, class: 'dropdown-item' %>
+                        </div>
+                    </li>
+                    <!-- Termina dropdown Carrera-->
+                    
+                    <!-- Dropdown de Estudiante-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="estudianteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Estudiantes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="estudianteDropdown">
+                            <%= link_to "Listado de Alumnos", students_path, class: 'dropdown-item' %>
+                            <%= link_to "Nuevo Alumno", new_student_path, class: 'dropdown-item' %>
+                        </div>
+                    </li>
+                    <!-- Termina Dropdown de Estudiante-->
+                    
+                </ul>
+            </div>
+        </nav>
+    </ul>
+    <!-- Aqui termino la insercion -->
+    </div>
+</nav>
