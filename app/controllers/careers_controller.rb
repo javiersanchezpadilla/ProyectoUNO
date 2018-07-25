@@ -58,6 +58,15 @@ class CareersController < ApplicationController
     redirect_to careers_path
   end
 
+  def uziel
+    # @algo = 'dfasd'
+  end
+
+  def import
+    Career.jav_crea_import(params[:archivo_en_pc])
+    redirect_to careers_path
+  end
+
   private
   def career_params
     params.require(:career).permit(:clave_carrera, :descripcion)

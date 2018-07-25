@@ -1,0 +1,5 @@
+<%# @algo %>
+<%= form_tag import_careers_path, multipart: true do %>
+	<p><%= file_field_tag :archivo_en_pc %></p>
+	<p><%= submit_tag "Importar", class: 'btn btn-primary' %></p>
+<% end %>

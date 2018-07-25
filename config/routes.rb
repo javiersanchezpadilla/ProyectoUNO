@@ -6,7 +6,12 @@ Rails.application.routes.draw do
   # get 'plans/show'
 
   resources :teachers
-  resources :careers
+  resources :careers do
+    collection do
+      get 'uziel'
+      post 'import'
+    end
+  end
   resources :students
   resources :plans
 

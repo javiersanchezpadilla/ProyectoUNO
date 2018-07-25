@@ -1,14 +1,14 @@
 <h1>Carreras Disponibles</h1>
 
+<div class="pull-right">
+    <%= link_to "Nueva Carrera", new_career_path, class: 'btn btn-primary' %>
+    <%= link_to "Descarga XLS", careers_path(format: :xlsx), class: 'btn btn-success'  %>
+</div>
+<div class="clearfix"></div>
+
 <% if @carrera.blank? %>
   <p>No hay carreras registradas en la DB</p>
 <% else %>
-    <div class="pull-right">
-        <%= link_to "Nueva Carrera", new_career_path, class: 'btn btn-primary' %>
-        <%= link_to "Descarga XLS", careers_path(format: :xlsx), class: 'btn btn-success'  %>
-    </div>
-    <div class="clearfix"></div>
-
     <table class="table table-striped table-hover">
         <thead class="thead-dark">
             <tr>
