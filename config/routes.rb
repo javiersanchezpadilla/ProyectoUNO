@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :subjects
+  resources :professors
   # get 'plans/index'
   # get 'plans/new'
   # get 'plans/edit'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180717160049) do
+ActiveRecord::Schema.define(version: 20180725155818) do
 
   create_table "careers", force: :cascade do |t|
     t.string "clave_carrera"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 20180717160049) do
     t.index ["career_id"], name: "index_plans_on_career_id"
   end
 
+  create_table "professors", force: :cascade do |t|
+    t.string "nombre"
+    t.date "fecha_nacimiento"
+    t.string "rfc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "students", force: :cascade do |t|
     t.string "control"
     t.string "nombre"
@@ -34,6 +42,16 @@ ActiveRecord::Schema.define(version: 20180717160049) do
     t.datetime "updated_at", null: false
     t.integer "plan_id"
     t.index ["plan_id"], name: "index_students_on_plan_id"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "professor_id"
+    t.string "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["professor_id"], name: "index_subjects_on_professor_id"
+    t.index ["student_id"], name: "index_subjects_on_student_id"
   end
 
   create_table "teachers", force: :cascade do |t|
